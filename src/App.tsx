@@ -4,7 +4,12 @@ import CreateContact from "./Components/Contact/CreateContact";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { Provider } from "react-redux";
 import { Store } from "./Store/Store";
 import { QueryClient, QueryClientProvider } from "react-query";
@@ -33,6 +38,10 @@ function App() {
                     />
                   </Route>
                   <Route path="/dashboard" element={<Dashboard />} />
+                  <Route
+                    path="*"
+                    element={<Navigate to="/contact" replace />}
+                  />
                 </Routes>
               </QueryClientProvider>
             </Provider>
