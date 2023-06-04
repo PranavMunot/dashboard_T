@@ -14,4 +14,4 @@ To run project on local machine:
 
 4. After installation run `npm start` to start application.
 
-## Hosted on [Online App Link]()
+## Hosted on [Online App Link](https://dashboardt.netlify.app)
